@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Learn everything about building awesome applications with
   Angular, React, Electron and Ionic using Selfbits Platform and
   Backend-as-a-Service
-baseurl: "/" # the subpath of your site, e.g. /blog
+# baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://blog.selfbits.io" # the base hostname & protocol for your site
 twitter_username: selfbits
 github_username:  selfbits
