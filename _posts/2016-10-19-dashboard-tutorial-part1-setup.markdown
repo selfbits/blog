@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Angular 2 Dashboard Tutorial - Introduction"
+title:  "Angular 2 Dashboard Tutorial - Part 1: Introduction and Setup"
 date:   2016-10-18 13:58:05 +0200
 categories: jekyll update
 ---
@@ -14,20 +14,30 @@ creating a dashboard app with it seems quite tempting.
 This is a humble attempt to guide you throw the steps of creating such a web app,
 using the current best & free angular 2 admin template out there and to connect it to a awesome free backend service.
 
+**Note:** It is assumed that you have at least some basic angular 2 knowledge including http calls, services and components. The main purpose is to help you ease into a mighty angular 2 admin template and to get your project started!
+
 ![Imgur](http://i.imgur.com/30DeaS4.png)
 
-## Content
+## Tutorial
 
-0. Part 0: Installation and Setup
-1. Part 1: Simple email sign up and sign in
-2. Part 2: Social (Facebook) sign up and sign in
-3. Part 2.5: Creating a separate AuthModule and AuthGuard
-4. Part 3: ...
+Aprt from part 1, this tutorial is written, that you can jump to any other parts.
+
+- [Part 1: Installation and Setup](dashboard-tutorial-part1-setup)
+- [Part 2: Simple email sign up and sign in](dashboard-tutorial-part2-email-auth)
+- Part 3: Social (Facebook) sign up and sign in
+- Part 4: Creating a separate AuthModule and AuthGuard
+- Part 5: ...
 
 
-## Part 0: Installation & Setup
+## Part 1: Installation & Setup
 
-I'm running a macOS ElCapitain v10.11.6.
+### Content
+
+- [1. Install Node and NPM](#install-node-and-npm)
+- [2. Install Global Node Modules](#install-global-node-modules)
+- [3. Setup admin template](#setup-admin-template)
+- [4. Setup Backend App](#setup-backend-app)
+- [5. Configure AppModule](#configure-appmodule)
 
 ### 1. Install Node and NPM
 
@@ -109,34 +119,44 @@ In order to connect our dashboard with a real backend system, we'll be using [Se
 
 It's totally free for NEED_FEEDBACK and we can set it up within 5min.
 
-1. Signup for a free account
-2. Create a new app
-3. Get your app credentials
-
-### Signup for a free account
+#### 4.1 Signup for a free account
 Go to [Selfbits](https://admin.selfbits.io/reg.html) and signup for a new account.
 I've signed up with my Github account. Once logged in, you should see a familiar dashboard.
 
 ![Imgur](http://i.imgur.com/Tdc6512.png)
 
-### Create a new app
+#### 4.2 Create a new app
 Click on **Create new project** and give it any name. I've called mine **ng-admin-tutorial**
 
 ![Imgur](http://i.imgur.com/uQuKZd5.png)
 
-### Get your app credentials
+#### 4.3 Get your app credentials
 Once the app is created click on the settings button (the small cog on the left side menu) to access your app credentials.
 
 ![Imgur](http://i.imgur.com/riv3sKY.png)
 
-You will need the **sub domain, app ip and app secret** later to configure your http calls inside your root ngModule.
+You will need the **sub domain, app ip and app secret** to configure your http calls inside your root ngModule, which will be our last step in the setup.
+
+### 5. Configure AppModule
+
+This step is necessary in order to connect ng2-admin to the selfbits app we've created in the previous step.
+
+Go to **ng2-admin/src/app/app.module.ts** and add these codes **above** the @NgModule decorator.
 
 ```js
-export const SELFBITSCONFIG ={
-  BASE_URL:'',
-  APP_ID:'',
-  APP_SECTRET:'',
-};
-```
+export interface AppConfig {
+  BASE_URL:string,
+  APP_ID:string,
+  APP_SECRET:string
+}
 
-That's it, we are ready to start. Feel free to browse the selfibts dashboard and continue.
+export const APPCONFIG:AppConfig = {
+    BASE_URL: 'your app subdomain',
+    APP_ID: 'your app id',
+    APP_SECRET: 'your app secret',
+};
+
+```
+Fill in the credentials found under Settings of your app from Selfbits and copy it accordingly to the APPCONFIG variable, be sure not to copy any whitespaces!
+
+That's it, we are ready to start. Feel free to browse the Selfibts dashboard and continue.

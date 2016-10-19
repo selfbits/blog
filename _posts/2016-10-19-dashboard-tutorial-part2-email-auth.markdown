@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Angular 2 Dashboard Tutorial - Part 1: Email Authentication"
+title:  "Angular 2 Dashboard Tutorial - Part 2: Email Authentication"
 date:   2016-10-18 13:58:05 +0200
 categories: jekyll update
 ---
@@ -13,22 +13,40 @@ Feel free to skip this part to go directly to social (facebook) authentication u
 
 ## Complete Content
 
-0. Part 0: Installation and Setup
-1. Part 1: Simple email sign up and sign in
-2. Part 2: Social (Facebook) sign up and sign in
-3. Part 2.5: Creating a separate AuthModule and AuthGuard
-4. Part 3: ...
+- [Part 1: Installation and Setup](dashboard-tutorial-part1-setup)
+- [Part 2: Simple email sign up and sign in](dashboard-tutorial-part2-email-auth)
+- Part 3: Social (Facebook) sign up and sign in
+- Part 4: Creating a separate AuthModule and AuthGuard
+- Part 5: ...
 
 
 ## Part 1: Email Authentication
 
 ![Imgur](http://i.imgur.com/SYsfC35.png)
 
-
 In the first part, we'll implement the following features using the vanilla ng2-admin sign in and sign up page.
 
 * Email sign up
-* Email sign in with sdk
+* Email sign in
+* Bonus: Email sign in with sdk
+
+### Content
+
+- [Step 1: Change default route](#step-1-change-default-route-to-login-page)
+- [Step 2: Connect ng2-admin to Selfbits](#step-2-connect-ng2-admin-to-selfbits)
+  - [Step 2.1 Create Auth Service](#step-21-create-auth-service)
+  - [Step 2.2: Configure our app.module](#step-22-configure-our-appmodule)
+  - [Step 2.3: Create AuthService](#step-23-create-authservice)
+  - [Step 2.4 Using AuthService](#step-24-using-authservice)
+- [Step 3: Email Login](#step-3-email-login)
+- [Step 4: Error Handling](#step-4-error-handling)
+- [Bonus: selfbits-angular2-sdk](#bonus-selfbits-angular2-sdk)
+  - [Bonus Step 1: Install SDK](#bonus-step-1-install-sdk)
+  - [Bonus Step 2: Import SDK](#)
+  - [Bonus Step 3: Configure app](#)
+  - [Bonus Step 4: Initialize the SDK](#)
+  - [Bonus Step 5: Use SelfbitsAngular Service](#)
+- [Summary](#summary)
 
 
 ### Step 1: Change default route to login page
@@ -137,7 +155,7 @@ export const APPCONFIG:AppConfig = {
 
 First we import the AuthService (since we already know it's location) and declare a typing for our config variable.
 
-Next we enter the credentials into the config variable and add type support to it. The credentials can be found in your Selfbits app settings [here]() TOFILLOUT
+You should have the next two blocks already in place, if you've followed the [setup from part 1](dashboard-tutorial-part1-setup#configure-appmodule). We need to provide the selfbits app credentials to our ng2-admin. The best way to accomplish it is by using angular's ngModule.
 
 <br>
 
@@ -154,7 +172,7 @@ Next we enter the credentials into the config variable and add type support to i
 })
 ```
 
-Finally we need to provide both the AuthService and the config variable globally so that we can inject them later to any service or component we want.
+Add AuthService and the config variable to the **providers** property so that we can inject them later to any service or component we want.
 
 <br>
 
@@ -449,17 +467,19 @@ And add below the two form control div (should be line 21) to **ng2-admin/src/ap
 
 ```html
 <!--Below the two form control div -->
-<div class="alert alert-danger" role="alert" *ngIf="error">{{errorMessage}}</div>
+<div class="alert alert-danger" role="alert" *ngIf="error"> { { errorMessage } } </div>
 ```
+
 
 ![Imgur](http://i.imgur.com/QoZd91O.png)
 
+<br>
 
-### Step 4: selfbits-angular2-sdk
+### Bonus: selfbits-angular2-sdk
 
 As stated earlier, we can reduce implementation time a lot by using a sweet sdk the guys form selfbits provided.
 
-#### Step 4.1: Install SDK
+#### Bonus Step 1: Install SDK
 
 Go to the project root folder and type into your terminal
 
@@ -467,15 +487,16 @@ Go to the project root folder and type into your terminal
 npm install selfbits-angular2-sdk --save
 ```
 
-#### Step 4.1: Import SDK
+#### Bonus Step 2: Import SDK
 Go to **ng2-admin/src/app/app.module.ts**
 
 ```js
 import {SelfbitsAngularModule} from "selfbits-angular2-sdk";
 ```
 
-#### Step 4.2: Configure app
-**Note** this needs to be placed **ABOVE** the @NgModule decorator
+#### Bonus Step 3: Configure app
+
+You should have done that already in [part 1 setup](dashboard-tutorial-part1-setup#configure-appmodule)
 
 ```js
 (...)
@@ -488,7 +509,7 @@ export const APPCONFIG = {
 @NgModule({...})
 ```
 
-#### Step 4.3: Initialize the SDK
+#### Bonus Step 4: Initialize the SDK
 
 ```js
 @NgModule({
@@ -499,9 +520,9 @@ export const APPCONFIG = {
 })
 ```
 
-#### Step 4.4 Use SelfbitsAngular Service
+#### Bonus Step 5: Use SelfbitsAngular Service
 
-The SelfbitsAngular Service contains a auth property which has among many also the signup and login method implemented.
+The SelfbitsAngular Service contains an auth property which contains among many also the same signup and login method we implemented in AuthService.
 
 Go to **ng2-admin/src/app/pages/login/login.component.ts**
 
@@ -512,7 +533,7 @@ import {SelfbitsAngular} from 'selfbits-angular2-sdk'
 
  (...)
 
- constructor(fb:FormBuilder, private auth:AuthService, private router:Router, private sb:SelfbitsAngular) {}
+constructor(fb:FormBuilder, private auth:AuthService, private router:Router, private sb:SelfbitsAngular) {}
 
 ```
 
@@ -537,5 +558,14 @@ public onSubmit(values):void {
     }
   }
 ```
+Try to implement the auth.signup yourself! All in all if you go the the [sdk's repository](https://github.com/selfbits/selfbits-angular2-sdk/blob/master/src/services/auth.ts), you can see that the login method looks pretty much the same
 
-Try to implemnt the auth.signup yourself! All in all if you go the the [sdk's repository](https://github.com/selfbits/selfbits-angular2-sdk/blob/master/src/services/auth.ts), you can see that the login method looks pretty much the same
+Their is also a detailed readme on [how to use the sdk](https://github.com/selfbits/selfbits-angular2-sdk)
+
+<br>
+
+### Summary
+
+In this first part we've covered a basic email authentication process, upon which the user will get redirected to a default page. We've connected our ng2-admin to a live backend services and learned how to provide and retrieve variables globally in our angular 2 app.
+
+In the next part we'll cover the famous social authentication with facebook!
