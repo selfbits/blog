@@ -16,7 +16,7 @@ using the current best & free Angular 2 admin template out there and to connect 
 
 **Note:** It is assumed that you have at least some basic Angular 2 knowledge including http calls, services and components. The main purpose is to help you ease into a mighty Angular 2 admin template and to get your project started!
 
-![Imgur](http://i.imgur.com/30DeaS4.png)
+![ng2-admin](/images/setup-tutorial/ng2-admin.png)
 
 ## Tutorial
 
@@ -25,8 +25,6 @@ Aprt from part 1, this tutorial is written, that you can jump to any other parts
 - [Part 1: Installation and Setup](dashboard-tutorial-part1-setup)
 - [Part 2: Simple email sign up and sign in](dashboard-tutorial-part2-email-auth)
 - [Part 3: Social (Facebook) sign up and sign in](dashboard-tutorial-part3-social-auth)
-- Part 4: Creating a separate AuthModule and AuthGuard
-- Part 5: ...
 
 
 ## Part 1: Installation & Setup
@@ -123,17 +121,17 @@ TODO: It's totally free for NEED_FEEDBACK and we can set it up within 5min.
 Go to [Selfbits](https://admin.selfbits.io/reg.html) and signup for a new account.
 I've signed up with my Github account. Once logged in, you should see a familiar dashboard.
 
-![Imgur](http://i.imgur.com/Tdc6512.png)
+![selfbits-dashboard](/images/setup-tutorial/selfbits-admin-dashboard.png)
 
 #### 4.2 Create a new app
 Click on **Create new project** and give it any name. I've called mine **ng-admin-tutorial**
 
-![Imgur](http://i.imgur.com/uQuKZd5.png)
+![selfbits-app-setting](/images/setup-tutorial/selfbits-create-project.png)
 
 #### 4.3 Get your app credentials
 Once the app is created click on the settings button (the small gear icon on the left side menu) to access your app credentials.
 
-![Imgur](http://i.imgur.com/riv3sKY.png)
+![selfbits-app-setting](/images/setup-tutorial/selfbits-app-setting.png)
 
 You will need the **sub domain, app ip and app secret** to configure your http calls inside your root ngModule, which will be our last step in the setup.
 
