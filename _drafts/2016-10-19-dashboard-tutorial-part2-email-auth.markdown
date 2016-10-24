@@ -22,7 +22,7 @@ Feel free to skip this part to go directly to social (facebook) authentication u
 
 ## Part 1: Email Authentication
 
-![Imgur](http://i.imgur.com/SYsfC35.png)
+![Imgur](/images/email-auth-tutorial/login-page.png)
 
 In the first part, we'll implement the following features using the vanilla ng2-admin sign in and sign up page.
 
@@ -102,7 +102,7 @@ Now it should redirect the url to the login page
 http://localhost:3000/#/login
 ```
 
-![Imgur](http://i.imgur.com/SYsfC35.png)
+![Imgur](/images/email-auth-tutorial/login-page.png)
 
 **Note:** We'll create later our own AuthModule with more advanced routing features in Part 2.5.
 
@@ -246,7 +246,7 @@ Go to your [Selfbits admin dashboard](https://admin.selfbits.io), enter your pro
 
 Scroll down and click on **Open/Hide** to see the Rest Endpoint Definitions
 
-![Imgur](http://i.imgur.com/T9tZ5FN.png)
+![Imgur](/images/email-auth-tutorial/api-auth-endpoints.png)
 
 and click on **/auth/signup** in our case the url for sign up should be
 
@@ -274,7 +274,7 @@ The parameters stated here need to be added to the headers.
 
 <br>
 
-![Imgur](http://i.imgur.com/etC9H9l.png)
+![Imgur](/images/email-auth-tutorial/auth-signup-api.png)
 
 <br>
 
@@ -349,13 +349,13 @@ Type in some credentials and click **Sign up**!
 
 **Note:** The form validators we've left untouched are now kicking in. For example, each field needs to be longer than 4 characters or it'll be invalid.
 
-![Imgur](http://i.imgur.com/sXZZchm.png)
+![Imgur](/images/email-auth-tutorial/signup-success-alert.png)
 
 In fact, let's head back to our Selfbits app and check if the user is registered!
 
 Go to your the [Selfbits admin dashboard](https://admin.selfbits.io), enter your app and click Authentication > Users
 
-![Imgur](http://i.imgur.com/seXRrCZ.png)
+![Imgur](/images/email-auth-tutorial/user-dashboard.png)
 
 That's it! We now already have a working email sign up. Let's see if we can sign in with the user we've just created!
 
@@ -433,7 +433,7 @@ http://localhost:3000
 
 and type in the user email with a wrong password
 
-![Imgur](http://i.imgur.com/1M4AItI.png)
+![Imgur](/images/email-auth-tutorial/error-handling.png)
 
 The console will log out the the error, in particular the response body will contain the error message. In this case it's as expected a 401 Unauthorized error.
 
@@ -475,7 +475,7 @@ And add below the two form control div (should be line 21) to **ng2-admin/src/ap
 ```
 
 
-![Imgur](http://i.imgur.com/QoZd91O.png)
+![Imgur](/images/email-auth-tutorial/error-message.png)
 
 <br>
 
