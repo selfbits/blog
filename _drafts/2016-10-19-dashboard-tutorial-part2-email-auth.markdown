@@ -15,9 +15,8 @@ Feel free to skip this part to go directly to social (facebook) authentication u
 
 - [Part 1: Installation and Setup](dashboard-tutorial-part1-setup)
 - [Part 2: Simple email sign up and sign in](dashboard-tutorial-part2-email-auth)
-- Part 3: Social (Facebook) sign up and sign in
-- Part 4: Creating a separate AuthModule and AuthGuard
-- Part 5: ...
+- [Part 3: Social (Facebook) sign up and sign in](dashboard-tutorial-part3-social-auth)
+
 
 
 ## Part 1: Email Authentication
@@ -526,7 +525,7 @@ export const APPCONFIG = {
 
 #### Bonus Step 5: Use SelfbitsAngular Service
 
-The SelfbitsAngular Service contains an auth property which contains among many also the same signup and login method we implemented in AuthService.
+The SelfbitsAngular Service contains an auth property which contains amongst other things the same signup and login method we implemented in AuthService.
 
 Go to **ng2-admin/src/app/pages/login/login.component.ts**
 
@@ -562,11 +561,11 @@ public onSubmit(values):void {
     }
   }
 ```
-Try to implement the auth.signup yourself! All in all if you go the the [sdk's repository](https://github.com/selfbits/selfbits-angular2-sdk/blob/master/src/services/auth.ts), you can see that the login method looks pretty much the same
+Try to implement the auth.signup yourself! All in all if you go the [sdk's repository](https://github.com/selfbits/selfbits-angular2-sdk/blob/master/src/services/auth.ts), you can see that the login method looks pretty much the same.
 
 Their is also a detailed readme on [how to use the sdk](https://github.com/selfbits/selfbits-angular2-sdk)
 
-<br>
+<br>s
 
 ### Summary
 

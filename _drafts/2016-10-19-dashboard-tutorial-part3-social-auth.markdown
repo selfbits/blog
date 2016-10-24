@@ -8,7 +8,7 @@ categories: jekyll update
 # Create your Angular 2 Dashboard - Part 1: Email Authentication
 
 This part will cover a simple email sign up and sign in.
-If you haven't done the setup yet, please go to Part 0 to do so.
+If you haven't done the setup yet, please go to Part 1 to do so.
 Feel free to skip this part to go directly to social (facebook) authentication using Selfbits.
 
 ## Complete Content
@@ -23,7 +23,7 @@ Feel free to skip this part to go directly to social (facebook) authentication u
 To optimize user experience, you **GOT** to provide social auth capabilities to your users. Instead of undergoing the burdensome OAuth process, maybe providers have developed libraries to make things easier for us.
 So does Selfbits and we'll explore how by adding a facebook signup to our login page.
 
-We'll be using Selfbit's SDK from the start this time, however for those who are interested I'll explain later what exactly the SDK is actually doing later!
+We'll be using Selfbit's SDK from the start this time. However for those who are interested I'll explain later what exactly the SDK is actually doing later!
 
 ### Content
 
@@ -213,7 +213,7 @@ Finally note down your Facebook app's **App ID** and **App Secret**.
 
 ### Step 4: Configure Facebook Auth on Selfbits
 
-Back to Selfbits, open up Authentication, Social and click on the settings cog of facebook to open the modal again.
+Back to Selfbits, open up Authentication, Social and click on the settings gear of facebook to open the modal again.
 
 Paste in the credentials of the facebook app we've created above.
 
@@ -226,7 +226,7 @@ That's it! We're ready to implement the facebook sign in to our ng2-admin.
 
 ### Step 5: Implement Facebook sign in
 
-**Note:** For this step, we'll need the Selfbits-Angular2-SDK. If you haven't installed it go to [Step 0](/)
+**Note:** For this step, we'll need the Selfbits-Angular2-SDK. If you haven't installed it go to [Step 1](/)
 
 Go to **ng2-admin/src/app/pages/login/login.component.ts** and inject the SelfbitsAngular as well as the Router Service into the constructor.
 
