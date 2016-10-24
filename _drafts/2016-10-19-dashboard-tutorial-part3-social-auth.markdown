@@ -16,8 +16,6 @@ Feel free to skip this part to go directly to social (facebook) authentication u
 - [Part 1: Installation and Setup](dashboard-tutorial-part1-setup)
 - [Part 2: Simple email sign up and sign in](dashboard-tutorial-part2-email-auth)
 - [Part 3: Social (Facebook) sign up and sign in](dashboard-tutorial-part3-social-auth)
-- Part 4: Creating a separate AuthModule and AuthGuard
-- Part 5: ...
 
 
 ## Part 3: Facebook Authentication
@@ -143,7 +141,7 @@ Now it should redirect the url to the login page
 http://localhost:3000/#/login
 ```
 
-![Imgur](http://i.imgur.com/SYsfC35.png)
+![login-page](/images/email-auth-tutorial/login-page.png)
 
 **Note:** We'll create later we'll our own AuthModule with more advanced routing features in Part 2.5.
 
@@ -263,3 +261,5 @@ Congrats! You've just added a facebook sign in to your app! Try to repeat the pr
 
 
 ### Summary
+
+In this article we've connected our dashboard to a user management system from Selfbits and enabled end users to sign up and login with their facebook accounts. There are a couple more methods the SDK offers, which you can look up [here](https://github.com/selfbits/selfbits-angular2-sdk).
