@@ -471,7 +471,7 @@ And add below the two form control div (should be line 21) to **ng2-admin/src/ap
 
 ```html
 <!--Below the two form control div -->
-<div class="alert alert-danger" role="alert" *ngIf="error"> { { errorMessage } } </div>
+<div class="alert alert-danger" role="alert" *ngIf="error"> {{ errorMessage }} </div>
 ```
 
 
