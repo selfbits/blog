@@ -8,19 +8,19 @@ categories: jekyll update
 # Create your Angular 2 Dashboard
 
 Admin Templates are awesome ...  and massive! You can create all sorts of web apps with it,
-yet they often require a lot of __*read in*__ time. With the offical release of Angular 2 in late August,
+yet they often require a lot of __*read in*__ time. With the official release of Angular 2 in late August,
 creating a dashboard app with it seems quite tempting.
 
 This is a humble attempt to guide you throw the steps of creating such a web app,
 using the current best & free Angular 2 admin template out there and to connect it to a awesome free backend service.
 
-**Note:** It is assumed that you have at least some basic Angular 2 knowledge including http calls, services and components. The main purpose is to help you ease into a mighty Angular 2 admin template and to get your project started!
+<div class="alert alert-info" role="alert">
+It is assumed that you have at least some basic Angular 2 knowledge including <strong>http calls, services and components</strong>. The main purpose is to help you ease into a mighty Angular 2 admin template and to get your project started!
+</div>
 
 ![ng2-admin](/images/setup-tutorial/ng2-admin.png)
 
 ## Tutorial
-
-Aprt from part 1, this tutorial is written, that you can jump to any other parts.
 
 - [Part 1: Installation and Setup](dashboard-tutorial-part1-setup)
 - [Part 2: Simple email sign up and sign in](dashboard-tutorial-part2-email-auth)
@@ -41,9 +41,8 @@ Aprt from part 1, this tutorial is written, that you can jump to any other parts
 
 Go to [nodejs.org](https://nodejs.org) and install the latest version on your pc/mac.
 
-**Note:** if you are mac user, please use [Homebrew](http://brew.sh) to install node.
+If you are mac user, please use [Homebrew](http://brew.sh) to install node.
 It's easier to update node and brew sets up your rights to use 'npm -g' without sudo.
-
 Inside your terminal type **brew install node**
 
 Check if node and npm are installed by typing **node -v** and **npm -v** inside your terminal.
@@ -115,7 +114,7 @@ Feel free to play around it a little bit! Here are the [documentations](https://
 
 In order to connect our dashboard with a real backend system, we'll use [Selfbits](https://selfbits.io). It's a great alternative to other backend service like firebase because unlike firebase, we can actually connect **our own database** to it.
 
-TODO: It's totally free for NEED_FEEDBACK and we can set it up within 5min.
+It's totally free and we can set it up within 5min.
 
 #### 4.1 Signup for a free account
 Go to [Selfbits](https://admin.selfbits.io/reg.html) and signup for a new account.
@@ -155,6 +154,6 @@ export const APPCONFIG:AppConfig = {
 };
 
 ```
-Fill in the credentials found under Settings of your app from Selfbits and copy it accordingly to the APPCONFIG variable, be sure not to copy any whitespaces!
+Fill in the credentials found under Settings of your app from Selfbits and copy it accordingly to the APPCONFIG variable, be sure not to copy any white spaces!
 
-That's it, we are ready to start. Feel free to browse the Selfibts dashboard and continue.
+That's it, we are ready to start. Feel free to browse the Selfibts dashboard and [continue](dashboard-tutorial-part1-setup).

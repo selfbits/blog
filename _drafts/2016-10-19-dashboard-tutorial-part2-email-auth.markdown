@@ -18,7 +18,6 @@ Feel free to skip this part to go directly to social (facebook) authentication u
 - [Part 3: Social (Facebook) sign up and sign in](dashboard-tutorial-part3-social-auth)
 
 
-
 ## Part 1: Email Authentication
 
 ![Imgur](/images/email-auth-tutorial/login-page.png)
@@ -227,7 +226,7 @@ signup(formData:auth):Observable<Response>{
 ```
 As you can see the signup method is basically a http post wrapper containing the information provided by the APPCONFIG variable in app.module.
 
-**Note:** the signup method returns an Observable of type Response, which is the default return type of Angular's http requests. Also in order to be able to use Http, you need to have import the HttpModule, which ng2-admin did alredy in the app.module.
+**Note:** the signup method returns an Observable of type Response, which is the default return type of Angular's http requests. Also in order to be able to use Http, you need to have import the HttpModule, which ng2-admin did already in the app.module.
 
 The [http post](https://angular.io/docs/ts/latest/api/http/index/Http-class.html) request takes 3 paramenters
 
@@ -307,7 +306,7 @@ export class Register{
   }
 }
 ```
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 **Note:** There's is another approach to create forms in Angular 2 called **template-driven** approach, which is faster to implement but offers less control. For authorization I always recommend using the data-driven approach.
 </div>
 
@@ -338,7 +337,9 @@ public onSubmit(values:any):void {
 ```
 As signup returns an Observable, we need to subscribe to it. If the http request was successful, it should pop an alert with a response of status 200. Alternatively console.log the response instead of using alert.
 
-**Note:** Change the type of values to **any** to avoid TypeScript Errors.
+<div class="alert alert-danger" role="alert">
+Change the type of values to <strong>any</strong> to avoid TypeScript Errors.
+</div>
 
 Let's test it! Wait for the app to compile, go to
 ```
@@ -390,6 +391,10 @@ constructor(fb:FormBuilder, private auth:AuthService, private router:Router) {..
 ```
 
 Then we implement the onSubmit method
+
+<div class="alert alert-danger" role="alert">
+Change the type of values to <strong>any</strong> to avoid TypeScript Errors.
+</div>
 
 ```js
 public onSubmit(values:any):void {

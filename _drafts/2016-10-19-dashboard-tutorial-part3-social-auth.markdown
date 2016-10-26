@@ -143,8 +143,6 @@ http://localhost:3000/#/login
 
 ![login-page](/images/email-auth-tutorial/login-page.png)
 
-**Note:** We'll create later we'll our own AuthModule with more advanced routing features in Part 2.5.
-
 <br>
 
 ### Step 2: Setting up Facebook Auth on Selfbits
