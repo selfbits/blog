@@ -2,7 +2,6 @@
 layout: post
 title:  "Welcome to Selfbits!"
 date:   2016-10-01 13:58:05 +0200
-tags: general,ionic,angular
+categories: blog ionic angular ionic
 ---
-Welcome to our blog. Here we'll provide you with knowledge and insights on various application development related topics and frameworks like [Angular](http://angular.io), [React](https://facebook.github.io/react/) and [Ionic](http://ionicframework.com).
-If you want to learn how to simply add backand services to your app, sign up for [Selfbits](https://www.selfbits.io).
+Welcome to our blog. Here we'll provide you with knowledge and insights on various application development related topics and frameworks like [Angular](http://angular.io), [React](https://facebook.github.io/react/) and [Ionic](http://ionicframework.com)

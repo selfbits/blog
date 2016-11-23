@@ -1,23 +1,21 @@
 ---
 layout: post
 title:  "Angular 2 Dashboard Tutorial - Part 3: Social (Facebook) Authentication"
-date:   2016-10-18 13:58:05 +0200
-categories: jekyll update
+author: Han Che, Klaus Welle
+date:   2016-11-24 08:00:03 +0200
+categories: blog tutorial angular2
+tags: Angular2 TypeScript Tutorial Authentication Social
 ---
 
-# Create your Angular 2 Dashboard - Part 1: Email Authentication
+# Create your Angular 2 Dashboard - Part 3: Facebook Authentication
 
-This part will cover a simple email sign up and sign in.
-If you haven't done the setup yet, please go to Part 0 to do so.
-Feel free to skip this part to go directly to social (facebook) authentication using Selfbits.
+This part will cover social (Facebook) authentication using Selfbits.
 
 ## Complete Content
 
 - [Part 1: Installation and Setup](dashboard-tutorial-part1-setup)
 - [Part 2: Simple email sign up and sign in](dashboard-tutorial-part2-email-auth)
 - [Part 3: Social (Facebook) sign up and sign in](dashboard-tutorial-part3-social-auth)
-- Part 4: Creating a separate AuthModule and AuthGuard
-- Part 5: ...
 
 
 ## Part 3: Facebook Authentication
@@ -25,7 +23,7 @@ Feel free to skip this part to go directly to social (facebook) authentication u
 To optimize user experience, you **GOT** to provide social auth capabilities to your users. Instead of undergoing the burdensome OAuth process, maybe providers have developed libraries to make things easier for us.
 So does Selfbits and we'll explore how by adding a facebook signup to our login page.
 
-We'll be using Selfbit's SDK from the start this time, however for those who are interested I'll explain later what exactly the SDK is actually doing later!
+We'll be using Selfbit's SDK from the start this time. However for those who are interested I'll explain later what exactly the SDK is actually doing later!
 
 ### Content
 
@@ -38,7 +36,7 @@ We'll be using Selfbit's SDK from the start this time, however for those who are
 - [Summary](#summary)
 
 
-### Step 0: Setup selfbits-angular2-sdk
+### Step 0: Setup Selfbits-Angular2-SDK
 
 We'll need to install, import, and initialize the library. If you've did the Bonus section from [part 2](dashboard-tutorial-part2-email-auth#bonus-selfbits-angular2-sdk), skip this Step.
 
@@ -143,9 +141,7 @@ Now it should redirect the url to the login page
 http://localhost:3000/#/login
 ```
 
-![Imgur](http://i.imgur.com/SYsfC35.png)
-
-**Note:** We'll create later we'll our own AuthModule with more advanced routing features in Part 2.5.
+![login-page](/images/email-auth-tutorial/login-page.png)
 
 <br>
 
@@ -167,7 +163,7 @@ Next click on Add inside Facebook to add it to your Selfbits app.
 ![social-auth-2](/images/social-auth-tutorial/2.png)
 
 It should display a modal asking for **Client Id** and **Client Secret**. Sound familiar?
-Close the modal for now, go to settings and note down your selfbits app suddomain (or copy it from your APPCONFIG BASE_URL).
+Close the modal for now, go to settings and note down your Selfbits app suddomain (or copy it from your APPCONFIG BASE_URL).
 
 Next we'll need to setup facebook.
 
@@ -202,7 +198,7 @@ Next click on **Skip and Create App ID** on the upper right side. Give your app 
 
 Go to **Settings** on the left-side menu. There you'll see your facebook app's **App ID** and **App Secret**.
 
-All you need to do is to paste the selfbits app subdomain you've noted down earlier inside **App Domains**.
+All you need to do is to paste the Selfbits app subdomain you've noted down earlier inside **App Domains**.
 
 Next, click on **+ Add Platform**, select **Website** and paste the subdomain also into **Site URL**.
 
@@ -215,7 +211,7 @@ Finally note down your Facebook app's **App ID** and **App Secret**.
 
 ### Step 4: Configure Facebook Auth on Selfbits
 
-Back to Selfbits, open up Authentication, Social and click on the settings cog of facebook to open the modal again.
+Back to Selfbits, open up Authentication, Social and click on the settings gear of facebook to open the modal again.
 
 Paste in the credentials of the facebook app we've created above.
 
@@ -228,7 +224,7 @@ That's it! We're ready to implement the facebook sign in to our ng2-admin.
 
 ### Step 5: Implement Facebook sign in
 
-**Note:** For this step, we'll need the selfbits-angular2-sdk. If you haven't installed it go to [Step 0](/)
+**Note:** For this step, we'll need the Selfbits-Angular2-SDK. If you haven't installed it go to [Step 1](/)
 
 Go to **ng2-admin/src/app/pages/login/login.component.ts** and inject the SelfbitsAngular as well as the Router Service into the constructor.
 
@@ -263,3 +259,5 @@ Congrats! You've just added a facebook sign in to your app! Try to repeat the pr
 
 
 ### Summary
+
+In this article we've connected our dashboard to a user management system from Selfbits and enabled end users to sign up and login with their facebook accounts. There are a couple more methods the SDK offers, which you can look up [here](https://github.com/selfbits/selfbits-angular2-sdk).
