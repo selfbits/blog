@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Angular 2 Dashboard Tutorial - Part 2: Email Authentication"
-date:   2016-10-18 13:58:05 +0200
-categories: jekyll update
+author: Han Che, Klaus Welle
+date:   2016-11-24 08:00:02 +0200
+categories: blog tutorial angular2
+tags: Angular2 TypeScript Tutorial Authentication Social
 ---
 
 # Create your Angular 2 Dashboard - Part 2: Email Authentication

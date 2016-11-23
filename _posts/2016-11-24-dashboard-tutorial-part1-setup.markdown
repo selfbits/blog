@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "Angular 2 Dashboard Tutorial - Part 1: Introduction and Setup"
-date:   2016-10-18 13:58:05 +0200
-categories: jekyll update
+author: Han Che, Klaus Welle
+date:   2016-11-24 08:00:01 +0200
+categories: blog tutorial angular2
+tags: Angular2 TypeScript Tutorial Authentication Social
 ---
 
 # Create your Angular 2 Dashboard
@@ -112,12 +114,12 @@ Feel free to play around it a little bit! Here are the [documentations](https://
 
 ### 4. Setup Backend App
 
-In order to connect our dashboard with a real backend system, we'll use [Selfbits](https://selfbits.io). It's a great alternative to other backend service like firebase because unlike firebase, we can actually connect **our own database** to it.
+In order to connect our dashboard with a real backend system, we'll use [Selfbits](https://www.selfbits.io?utm_source=blog&utm_medium=ang2tut_part1). It's a great alternative to other backend service like firebase because unlike firebase, we can actually connect **our own database** to it.
 
 It's totally free and we can set it up within 5min.
 
 #### 4.1 Signup for a free account
-Go to [Selfbits](https://admin.selfbits.io/reg.html) and signup for a new account.
+Go to [Selfbits](https://www.selfbits.io?utm_source=blog&utm_medium=ang2tut_part1) and signup for a new account.
 I've signed up with my Github account. Once logged in, you should see a familiar dashboard.
 
 ![selfbits-dashboard](/images/setup-tutorial/selfbits-admin-dashboard.png)

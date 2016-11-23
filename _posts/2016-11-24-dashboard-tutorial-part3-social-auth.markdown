@@ -1,15 +1,15 @@
 ---
 layout: post
 title:  "Angular 2 Dashboard Tutorial - Part 3: Social (Facebook) Authentication"
-date:   2016-10-18 13:58:05 +0200
-categories: jekyll update
+author: Han Che, Klaus Welle
+date:   2016-11-24 08:00:03 +0200
+categories: blog tutorial angular2
+tags: Angular2 TypeScript Tutorial Authentication Social
 ---
 
-# Create your Angular 2 Dashboard - Part 1: Email Authentication
+# Create your Angular 2 Dashboard - Part 3: Facebook Authentication
 
-This part will cover a simple email sign up and sign in.
-If you haven't done the setup yet, please go to Part 1 to do so.
-Feel free to skip this part to go directly to social (facebook) authentication using Selfbits.
+This part will cover social (Facebook) authentication using Selfbits.
 
 ## Complete Content
 
