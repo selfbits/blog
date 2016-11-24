@@ -158,4 +158,4 @@ export const APPCONFIG:AppConfig = {
 ```
 Fill in the credentials found under Settings of your app from Selfbits and copy it accordingly to the APPCONFIG variable, be sure not to copy any white spaces!
 
-That's it, we are ready to start. Feel free to browse the Selfibts dashboard and [continue](dashboard-tutorial-part1-setup).
+That's it, we are ready to start. Feel free to browse the Selfibts dashboard and [continue](dashboard-tutorial-part2-email-auth) .
