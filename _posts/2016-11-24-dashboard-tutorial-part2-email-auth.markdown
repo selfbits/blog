@@ -570,12 +570,11 @@ public onSubmit(values):void {
 ```
 Try to implement the auth.signup yourself! All in all if you go the [sdk's repository](https://github.com/selfbits/selfbits-angular2-sdk/blob/master/src/services/auth.ts), you can see that the login method looks pretty much the same.
 
-Their is also a detailed readme on [how to use the sdk](https://github.com/selfbits/selfbits-angular2-sdk)
+Their is also a detailed readme on [how to use the sdk](https://github.com/selfbits/selfbits-angular2-sdk).
 
-<br>s
 
 ### Summary
 
 In this first part we've covered a basic email authentication process, upon which the user will get redirected to a default page. We've connected our ng2-admin to a live backend services and learned how to provide and retrieve variables globally in our angular 2 app.
 
-In the next part we'll cover the famous social authentication with facebook!
+In the [next part](dashboard-tutorial-part3-social-auth) we'll cover the famous social authentication with facebook!
