@@ -9,7 +9,7 @@ tags: Angular2 TypeScript Tutorial Authentication Social
 
 <div class="alert alert-danger" role="alert">
 UPDATE (24. Juli 2017):
-This article was published when Angular 2 was still unstable. Since then, the Angular team published two major (breaking) releases. Struggling with limited time and resources, we are not able to provide support for this version. We also deprecated our Platform V1 to be able to focus on the release of a stable Version 2 where we focus on a better user and tenant management. If you are interested in receiving news of our platform V2, feel free to subscribe to our newsletter at [Selfbits.io](https://www.selfbits.io?utm_source=blog&utm_medium=ang2tut_part1).
+This article was published when Angular 2 was still unstable. Since then, the Angular team published two major (breaking) releases. Struggling with limited time and resources, we are not able to provide support for angular 2 and the contents of this blog post. We also deprecated our Platform V1 to be able to focus on the release of a stable Version 2 where we focus on a better user and tenant management. If you are interested in receiving news of our platform V2, feel free to subscribe to our newsletter at Selfbits.io.
 </div>
 
 # Create your Angular 2 Dashboard
